@@ -5,33 +5,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Web Development Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="scripts.js" defer></script>
 </head>
 
-<body>
-  <header class="flex">
-    <div class="flex between">
-      <div class="corner-solid bg-main"></div>
+<body class="bg-light corner-solid">
+  <header class="flex column">
+    <div class="flex end nav-container">
       <nav class="nav flex">
         <ul>
-          <li><a href="#Projects">Projects</a></li>
-          <li><a href="#About">About</a></li>
-          <li><a href="#Contact">Contact</a></li>
+          <li><a class="color-gray bold" href="#Projects">Projects</a></li>
+          <li><a class="color-gray bold" href="#About">About</a></li>
+          <li><a class="color-gray bold" href="#Contact">Contact</a></li>
         </ul>
       </nav>
     </div>
-    <div class="hero flex around mw85">
-      <div class="hero-left flex column">
-        <h1>Sofia Panchaud</h1>
-        <h2>Software Engineer</h2>
+    <div class="hero flex">
+      <div class="hero-left flex column even">
+        <h2 class="color-main">Software Engineer</h2>
+        <h1 class="color-gray">Sofia Panchaud</h1>
       </div>
-      <div class="hero-right flex column">
+      <div class="hero-right flex column even">
         <div class="city">
-          <h3>Hamilton, Ontario</h3>
+          <h3 class="color-gray">Hamilton, Ontario</h3>
         </div>
         <div>
-          <button class="hero-btn">Contact Me</button>
+          <button class="hero-btn"><a class="color-gray bold" href="#Contact">Contact Me</a></button>
         </div>
       </div>
+    </div>
+    <div class="hexagons">
+      <div class="hexagon hexagon1"></div>
+      <div class="hexagon hexagon2"></div>
+      <div class="hexagon hexagon3"></div>
     </div>
   </header>
   <main>
