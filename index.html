@@ -6,7 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Web Development Portfolio</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
   <script src="scripts.js" defer></script>
+
 </head>
 
 <body class="bg-light corner-solid">
@@ -15,7 +17,6 @@
       <nav class="nav flex">
         <ul>
           <li><a class="color-gray bold" href="#Projects">Projects</a></li>
-          <!-- <li><a class="color-gray bold" href="#About">About</a></li> -->
           <li><a class="color-gray bold" href="#Contact">Contact</a></li>
         </ul>
       </nav>
@@ -43,17 +44,50 @@
   <main>
     <section id="Projects" class="projects bg-main">
       <h2 class="color-light">Project Gallery</h2>
-      <div id="project-gallery" class="project-gallery">
-        <!-- Dynamic project wall, js powered -->
+      <div id="project-gallery" class="project-gallery flex">
+        <div class="gallery-column">
+          <div class="gallery-item">
+            <a href="#">
+              <span class="hover-text color-light">Jungle - E-commerce App</span>
+              <img src="/assets/jungle_thumb.png" alt="">
+          </div>
+          </a>
+        </div>
+        <div class="flex column gallery-column between">
+          <div class="gallery-item gallery-item--height2">
+            <a href="#">
+              <img src="/assets/med-bg.jpg" alt="">
+            </a>
+            <span class="hover-text color-light">MedConnect - Connect Doctors with Patients</span>
+          </div>
+          <div class="gallery-item gallery-item--height2">
+            <a href="#">
+              <img src="/assets/resource_wall.png" alt="">
+              <span class="hover-text color-light">Resource Wall - Collect Learning Resources</span>
+
+            </a>
+          </div>
+        </div>
+        <div class="gallery-column">
+          <div class="gallery-item">
+            <a href="#">
+              <img src="/assets/photolabs_thumb.png" alt="">
+              <span class="hover-text color-light">Photolabs - Lightweight Pinterest Clone</span>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
     <section id="Contact" class="contact flex">
       <aside class="bg-gray">
-        <h2 class="color-light">Contact Me</h2>
-        <div>
-          <p class="color-light">With professional experience on the Frontend and education in the Fullstack, I am a
-            well-rounded individual that can help you build a beautiful, accessible, and fast website. Contact me today
-            and we can discuss your project's details. </p>
+        <div class="flex column between contact-text">
+          <h2 class="color-light">Contact Me</h2>
+          <div>
+            <p class="color-light">With professional experience on the Frontend and education in the Fullstack, I am a
+              well-rounded individual that can help you build a beautiful, accessible, and fast website. Contact me
+              today
+              and we can discuss your project's details. </p>
+          </div>
         </div>
       </aside>
       <aside>
@@ -73,8 +107,19 @@
           <div class="links">
             <h3>Find me on:</h3>
             <ul>
-              <li><a href="https://www.linkedin.com/in/sofia-panchaud/">LinkedIn</a></li>
-              <li><a href="https://github.com/SofPan">GitHub</a></li>
+              <li>
+                <a rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/sofia-panchaud/"
+                  alt="find me on Linkedin">
+                  <i alt="linkedIn" class="fab fa-linkedin"></i>
+                  <span class="sr-only">LinkedIn</span>
+                </a>
+              </li>
+              <li>
+                <a rel="noreferrer" target="_blank" href="https://github.com/SofPan" alt="find me on GitHub">
+                  <i alt="GitHub" class="fab fa-github"></i>
+                  <span class="sr-only">GitHub</span>
+                </a>
+              </li>
             </ul>
           </div>
         </div>
@@ -84,6 +129,8 @@
   <footer>
     <!-- For accessible page end -->
   </footer>
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+  <script src="https://kit.fontawesome.com/0d565c5540.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

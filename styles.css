@@ -53,6 +53,7 @@ h1{
 
 h2{
   font-size: 2.8rem;
+  margin-bottom: 12px;
 }
 
 h3{
@@ -70,7 +71,7 @@ p{
 
 /* Colors */
 .color-main{
-  color: rgb(5, 103, 105);
+  color: rgb(7, 141, 143);
 }
 
 .color-dark{
@@ -86,7 +87,7 @@ p{
 }
 
 .bg-main{
-  background-color: rgb(5, 103, 105);
+  background-color: rgb(7, 141, 143);
 }
 
 .bg-light{
@@ -127,7 +128,7 @@ header{
   height: 170px;
   background-image: linear-gradient(
                       145deg,
-                      rgb(5, 103, 105) 45%,
+                      rgb(7, 141, 143) 45%,
                       transparent 45%
                       ) ;
 }
@@ -149,7 +150,7 @@ header{
   position: absolute;
   bottom: 0;
   left: 0;
-  background-color: rgb(5, 103, 105);
+  background-color: rgb(7, 141, 143);
   width: 0;
   height: 3px;
   transition: width 450ms ease-out;
@@ -184,7 +185,7 @@ header{
   position: absolute;
   height: 90%;
   width: 3px;
-  background-color: rgb(5, 103, 105);
+  background-color: rgb(7, 141, 143);
   right: 0;
 }
 
@@ -203,8 +204,8 @@ header{
 }
 
 .hero-btn:hover{
-  background: rgb(5, 103, 105);
-  border-color: rgb(5, 103, 105);
+  background: rgb(7, 141, 143);
+  border-color: rgb(7, 141, 143);
 }
 .hero-btn a{
   transition: color 300ms ease-out;
@@ -215,8 +216,11 @@ header{
 
 .city{
   width: 200%;
-  padding-bottom: 48px;
-  border-bottom: dotted 25px rgb(5, 103, 105);
+  padding-bottom: 60px;
+  background-image: radial-gradient(rgb(7, 141, 143) 20%, transparent 20%);
+  background-color: transparent;
+  background-position: 50px 108px;
+  background-size: 77px 80px;
 }
 
 .hexagons{
@@ -239,8 +243,8 @@ header{
   top: 0;
   left: -21em;
   transform: rotate(49deg);
-  border-left: solid 10px rgb(5, 103, 105);
-  border-right: solid 10px rgb(5, 103, 105);
+  border-left: solid 10px rgb(7, 141, 143);
+  border-right: solid 10px rgb(7, 141, 143);
 }
 
 .hexagon1:before, .hexagon1:after {
@@ -256,14 +260,14 @@ header{
 
 .hexagon1:before {
   top: -114.066017px;
-  border-top: solid 14.142135623730951px rgb(5, 103, 105);
-  border-right: solid 14.142135623730951px rgb(5, 103, 105);
+  border-top: solid 14.142135623730951px rgb(7, 141, 143);
+  border-right: solid 14.142135623730951px rgb(7, 141, 143);
 }
 
 .hexagon1:after {
   bottom: -106.06601717798212px;
-  border-bottom: solid 14.142135623730951px rgb(5, 103, 105);
-  border-left: solid 14.142135623730951px rgb(5, 103, 105);
+  border-bottom: solid 14.142135623730951px rgb(7, 141, 143);
+  border-left: solid 14.142135623730951px rgb(7, 141, 143);
 }
 
 .hexagon2{
@@ -284,8 +288,8 @@ header{
 
 .hexagon2:before {
   top: -114.066017px;
-  border-top: solid 14.142135623730951px rgb(5, 103, 105);
-  border-right: solid 14.142135623730951px rgb(5, 103, 105);
+  border-top: solid 14.142135623730951px rgb(7, 141, 143);
+  border-right: solid 14.142135623730951px rgb(7, 141, 143);
 }
 
 .hexagon2:after {
@@ -311,14 +315,14 @@ header{
 
 .hexagon3:before {
   top: -114.066017px;
-  border-top: solid 14.142135623730951px rgb(5, 103, 105);
-  border-right: solid 14.142135623730951px rgb(5, 103, 105);
+  border-top: solid 14.142135623730951px rgb(7, 141, 143);
+  border-right: solid 14.142135623730951px rgb(7, 141, 143);
 }
 
 .hexagon3:after {
   bottom: -106.06601717798212px;
-  border-bottom: solid 14.142135623730951px rgb(5, 103, 105);
-  border-left: solid 14.142135623730951px rgb(5, 103, 105);
+  border-bottom: solid 14.142135623730951px rgb(7, 141, 143);
+  border-left: solid 14.142135623730951px rgb(7, 141, 143);
 }
 
 
@@ -344,6 +348,55 @@ aside{
   padding: 64px;
 }
 
+.gallery-column{
+  width: 30%;
+  height: 400px;
+  margin: 0 10px;
+}
+
+.gallery-item{
+  width: 100%;
+  height: 100%;
+  border: 5px solid transparent;
+  transition: all 300ms ease-out;
+  border-radius: 5px;
+}
+
+.gallery-item{
+  position: relative;
+}
+  
+.gallery-item img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.gallery-item--height2{
+  height: 45%;
+}
+
+.hover-text{
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+  left: 0;
+  font-size: 1.1rem;
+  text-wrap: nowrap;
+  transition: all 300ms ease-out;
+}
+
+.gallery-item:hover .hover-text{
+  visibility: visible;
+  bottom: -1.5em;
+}
+
+.gallery-item:hover{
+  border-color: rgb(12, 221, 225);
+}
+
 /* Contact Form */
 form{
   height: 100%;
@@ -363,8 +416,8 @@ textarea{
 
 input:focus,
 textarea:focus{
-  outline: outset rgb(5, 103, 105);
-  box-shadow: 3px 3px 5px 0 rgb(5, 103, 105);
+  outline: outset rgb(7, 141, 143);
+  box-shadow: 3px 3px 5px 0 rgb(7, 141, 143);
 
 }
 
@@ -386,7 +439,38 @@ textarea{
 
 .form-btn:hover{
   cursor: pointer;
-  border-color:rgb(5, 103, 105);
-  background-color: rgb(5, 103, 105);
+  border-color:rgb(7, 141, 143);
+  background-color: rgb(7, 141, 143);
+}
+
+.links{
+  padding-top: 36px;
+}
+
+.links h3{
+  font-size: 1.8rem;
+}
+
+.links ul{
+  margin-top: 12px;
+}
+
+.links ul li{
+  display: inline-block;
+  margin-right: 12px;
+}
+
+i{
+  font-size: 1.6rem;
+  transition: all 300ms ease-out;
+}
+
+i:hover{
+  color: rgb(7, 141, 143);
+  cursor: pointer;
+}
+
+.contact-text{
+  height: 70%;
 }
 /* Footer */
