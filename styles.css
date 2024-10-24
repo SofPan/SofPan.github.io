@@ -473,4 +473,123 @@ i:hover{
 .contact-text{
   height: 70%;
 }
-/* Footer */
+/* Responsive */
+
+@media only screen and (max-width: 800px){
+  header{
+    height: unset;
+    max-height: unset;
+  }
+  .nav-container{
+    padding: 24px;
+  }
+  .hero{
+    flex-direction: column;
+    height: unset;
+    justify-content: space-around;
+    padding-right: 0;
+  }
+
+  .hero-left.flex{
+    justify-content: flex-start;
+    flex-direction: column-reverse;
+    height: 150px;
+    padding-right: 0;
+    padding-bottom: 24px;
+  }
+
+  .hero-right.flex{
+    justify-content: flex-start;
+    padding-top: 24px;
+    padding-left: 0;
+    text-align: right;
+  }
+  .hero-left::after{
+    width: 75%;
+    height: 3px;
+    right: unset;
+    bottom: 0;
+    left: 25%;
+  }
+
+  .city{
+    width: unset;
+    background-image: unset;
+    padding-bottom: 24px;
+  }
+
+  .hero-btn{
+    border-color: rgb(7, 141, 143);
+    background-color: rgb(7, 141, 143);
+  }
+
+  button.hero-btn a{
+    color: lightgray;
+  }
+
+  .project-gallery.flex{
+    flex-direction: column;
+    width: 100%;
+    height: unset;
+  }
+
+  .gallery-column{
+    width: 100%;
+    height: 350px;
+    margin: 36px 0;
+  }
+
+  .gallery-item{
+    margin-bottom: 36px;
+  }
+
+  .hover-text{
+    position: relative;
+    visibility: visible;
+    line-height: 20px;
+    text-wrap: wrap;
+  }
+
+  .contact.flex{
+    flex-direction: column;
+  }
+
+  aside{
+    width: 100%;
+    max-width: 100%;
+    padding: unset;
+  }
+
+  aside > div{
+    padding: 64px;
+  }
+}
+
+@media only screen and (max-width: 425px){
+  h2{
+    font-size: 1.9rem;
+  }
+  h3{
+    font-size: 1.7rem;
+  }
+  .hexagons{
+    display: none;
+  }
+  .nav ul li{
+    padding: unset;
+    padding-left: 12px;
+  }
+  .hero-left.flex,
+  .hero-right.flex{
+    height: unset;
+  }
+  .corner-solid::after{
+    width: 50px;
+    height: 45px;
+  }
+
+  .projects,
+  aside > div{
+    padding: 24px;
+  }
+}
