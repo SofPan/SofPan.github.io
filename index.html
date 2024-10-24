@@ -15,7 +15,7 @@
       <nav class="nav flex">
         <ul>
           <li><a class="color-gray bold" href="#Projects">Projects</a></li>
-          <li><a class="color-gray bold" href="#About">About</a></li>
+          <!-- <li><a class="color-gray bold" href="#About">About</a></li> -->
           <li><a class="color-gray bold" href="#Contact">Contact</a></li>
         </ul>
       </nav>
@@ -41,32 +41,44 @@
     </div>
   </header>
   <main>
-    <section id="Projects">
-      <h2>Project Gallery</h2>
-      <div id="project-gallery" class="projects">
+    <section id="Projects" class="projects bg-main">
+      <h2 class="color-light">Project Gallery</h2>
+      <div id="project-gallery" class="project-gallery">
         <!-- Dynamic project wall, js powered -->
       </div>
     </section>
-    <section id="About">
-      <h2>About</h2>
-      <div class="about">
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat explicabo rerum, commodi consequuntur
-          voluptate consectetur quaerat quas molestias dolorum, quos itaque architecto ipsum laudantium. Laudantium
-          tempora repellendus id culpa adipisci.</p>
-      </div>
-    </section>
-    <section id="Contact">
-      <h2>Contact Me</h2>
-      <div class="contact">
-        <!-- plug in contact form -->
-        <div class="links">
-          <h3>Find me on:</h3>
-          <ul>
-            <li><a href="https://www.linkedin.com/in/sofia-panchaud/">LinkedIn</a></li>
-            <li><a href="https://github.com/SofPan">GitHub</a></li>
-          </ul>
+    <section id="Contact" class="contact flex">
+      <aside class="bg-gray">
+        <h2 class="color-light">Contact Me</h2>
+        <div>
+          <p class="color-light">With professional experience on the Frontend and education in the Fullstack, I am a
+            well-rounded individual that can help you build a beautiful, accessible, and fast website. Contact me today
+            and we can discuss your project's details. </p>
         </div>
-      </div>
+      </aside>
+      <aside>
+        <div class="contact-form">
+          <form action="https://formspree.io/f/xwpkpanw" method="POST" class="flex column">
+            <label>
+              <input type="text" name="name" placeholder="Your name">
+            </label>
+            <label>
+              <input type="email" name="email" placeholder="your_email@email.com">
+            </label>
+            <label>
+              <textarea name="message" placeholder="Your message"></textarea>
+            </label>
+            <button type="submit" class="form-btn">Send</button>
+          </form>
+          <div class="links">
+            <h3>Find me on:</h3>
+            <ul>
+              <li><a href="https://www.linkedin.com/in/sofia-panchaud/">LinkedIn</a></li>
+              <li><a href="https://github.com/SofPan">GitHub</a></li>
+            </ul>
+          </div>
+        </div>
+      </aside>
     </section>
   </main>
   <footer>
