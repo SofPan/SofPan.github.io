@@ -7,8 +7,12 @@
   <title>Web Development Portfolio</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
-  <script src="scripts.js" defer></script>
-
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+  <script defer>
+    function onSubmit() {
+      document.getElementById("contactForm").submit()
+    }
+  </script>
 </head>
 
 <body class="bg-light corner-solid">
@@ -92,7 +96,7 @@
       </aside>
       <aside>
         <div class="contact-form">
-          <form action="https://formspree.io/f/xwpkpanw" method="POST" class="flex column">
+          <form id="contactForm" action="https://formspree.io/f/xwpkpanw" method="POST" class="flex column">
             <label>
               <input type="text" name="name" placeholder="Your name">
             </label>
@@ -102,7 +106,8 @@
             <label>
               <textarea name="message" placeholder="Your message"></textarea>
             </label>
-            <button type="submit" class="form-btn">Send</button>
+            <button class="g-recaptcha form-btn" data-sitekey="6LfcIWsqAAAAALWFVBY3QzfpxPGbJAhDEsmpaRs7"
+              data-callback='onSubmit' data-action='submit' type="submit">Send</button>
           </form>
           <div class="links">
             <h3>Find me on:</h3>
