@@ -505,6 +505,7 @@ i:hover{
   }
   .nav-container{
     padding: 24px;
+    max-width: 85%;
   }
   .hero{
     flex-direction: column;
@@ -527,6 +528,13 @@ i:hover{
     padding-left: 0;
     text-align: right;
   }
+
+  .hero-left,
+  .hero-right,
+  .contact-text{
+    max-width: 85%;
+  }
+
   .hero-left::after{
     width: 75%;
     height: 3px;
@@ -549,21 +557,41 @@ i:hover{
   button.hero-btn a{
     color: lightgray;
   }
+  .projects{
+    padding: 32px;
+  }
 
   .project-gallery.flex{
     flex-direction: column;
     width: 100%;
     height: unset;
+    max-width: 85%;
+    margin: 0 auto;
   }
 
   .gallery-column{
     width: 100%;
-    height: 350px;
+    height: unset;
     margin: 36px 0;
   }
 
   .gallery-item{
+    max-width: 85%;
+    margin: 0 auto;
     margin-bottom: 36px;
+  }
+
+  .gallery-item a{
+    margin-bottom: 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .gallery-item img{
+    max-height: 350px;
+    width: 100%;
   }
 
   .hover-text{
@@ -584,7 +612,7 @@ i:hover{
   }
 
   aside > div{
-    padding: 64px;
+    padding: 32px;
   }
 }
 
