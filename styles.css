@@ -45,6 +45,14 @@ body, header, nav, main, section, div, ul, ol, li, aside, h1, h2, h3, h4, p, a, 
   justify-content: flex-end;
 }
 
+.center {
+  justify-content: center;
+}
+
+.align-center{
+  align-items: center;
+}
+
 /* Typography */
 
 h1{
@@ -348,18 +356,20 @@ aside{
   padding: 64px;
 }
 
+.projects.professional{
+  padding-bottom: 0;
+}
+
 .gallery-column{
   width: 30%;
   height: 400px;
   margin: 0 10px;
 }
 
-.gallery-item{
+.gallery-item_full-height{
   width: 100%;
   height: 100%;
-  border: 5px solid transparent;
-  transition: all 300ms ease-out;
-  border-radius: 5px;
+  
 }
 
 .gallery-item{
@@ -371,6 +381,18 @@ aside{
   width: 100%;
   height: 100%;
   position: relative;
+  border: 5px solid transparent;
+  transition: all 300ms ease-out;
+  border-radius: 5px;
+}
+
+
+.gallery-logo img {
+  object-fit: contain;
+  height: auto;
+  width: auto;
+  max-height: 100%;
+  max-width: 100%;
 }
 
 .gallery-item--height2{
@@ -390,12 +412,13 @@ aside{
 
 .gallery-item:hover .hover-text{
   visibility: visible;
-  bottom: -1.5em;
+  bottom: -2em;
 }
 
-.gallery-item:hover{
+.gallery-item:hover img{
   border-color: rgb(12, 221, 225);
 }
+
 
 /* Contact Form */
 form{
