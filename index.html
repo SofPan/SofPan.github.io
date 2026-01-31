@@ -7,6 +7,7 @@
   <title>Web Development Portfolio</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
+  <script defer src="scripts.js"></script>
   <script defer src="https://www.google.com/recaptcha/api.js"></script>
   <script defer>
     function onSubmit() {
@@ -15,27 +16,27 @@
   </script>
 </head>
 
-<body class="bg-light corner-solid">
+<body class="bg-main corner-solid">
   <header class="flex column">
     <div class="flex end nav-container">
       <nav class="nav flex">
         <ul>
-          <li><a class="color-gray bold" href="#Professional">Projects</a></li>
-          <li><a class="color-gray bold" href="#Contact">Contact</a></li>
+          <li><a class="color-light bold" href="#Professional">Projects</a></li>
+          <li><a class="color-light bold" href="#Contact">Contact</a></li>
         </ul>
       </nav>
     </div>
     <div class="hero flex">
       <div class="hero-left flex column even">
-        <h2 class="color-main">Software Engineer</h2>
-        <h1 class="color-gray">Sofia Panchaud</h1>
+        <h2 class="color-light">Software Engineer</h2>
+        <h1 class="color-light">Sofia Panchaud</h1>
       </div>
       <div class="hero-right flex column even">
         <div class="city">
-          <h3 class="color-gray">Hamilton, Ontario</h3>
+          <h3 class="color-light">Hamilton, Ontario</h3>
         </div>
         <div>
-          <button class="hero-btn"><a class="color-gray bold" href="#Contact">Contact Me</a></button>
+          <button class="hero-btn"><a class="color-light bold" href="#Contact">Contact Me</a></button>
         </div>
       </div>
     </div>
@@ -46,72 +47,20 @@
     </div>
   </header>
   <main>
-    <section id="Professional" class="projects professional bg-main">
-      <h2 class="color-light">Professional Work</h2>
-      <div id="project-gallery" class="project-gallery flex">
-        <div class="gallery-column flex align-center center ">
-          <div class="gallery-item gallery-logo">
-            <a rel="noreferrer" target="_blank" href="https://shareholder.ford.com/Home/default.aspx">
-              <img src="/assets/ford-logo.png" alt="Ford Motor Logo">
-              <span class="hover-text color-light">Ford Investor Relations</span>
-          </div>
-          </a>
-        </div>
-        <div class="gallery-column flex align-center center">
-          <div class="gallery-item gallery-logo">
-            <a rel="noreferrer" target="_blank" href="https://www.sbasite.com/English/overview/default.aspx">
-              <img src="/assets/SBA_logo.svg" alt="SBA Communications Logo">
-            </a>
-            <span class="hover-text color-light">SBA Communications</span>
-          </div>
-        </div>
-        <div class="gallery-column flex align-center center">
-          <div class="gallery-item gallery-logo">
-            <a rel="noreferrer" target="_blank" href="https://investor.postalrealtytrust.com/overview/default.aspx">
-              <img src="/assets/postal-logo.png" alt="Postal Realty Trust Logo">
-              <span class="hover-text color-light">Postal Realty Trust Investor Relations</span>
-            </a>
-          </div>
-        </div>
+    <section id="Professional" class="projects professional bg-light">
+      <h2>Professional Work</h2>
+      <div id="featured_professional" className="flex">
+        <!-- Professional Work Goes Here -->
       </div>
     </section>
-    <section id="Projects" class="projects bg-main">
-      <h2 class="color-light">Personal Projects</h2>
-      <div id="project-gallery" class="project-gallery flex">
-        <div class="gallery-column">
-          <div class="gallery-item gallery-item_full-height">
-            <a rel="noreferrer" target="_blank" href="https://github.com/SofPan/jungle">
-              <img src="/assets/jungle_thumb.png" alt="">
-              <span class="hover-text color-light">Jungle - E-commerce App</span>
-            </a>
-          </div>
-        </div>
-        <div class="flex column gallery-column between">
-          <div class="gallery-item gallery-item--height2">
-            <a rel="noreferrer" target="_blank" href="https://github.com/SofPan/MedConnect">
-              <img src="/assets/med-bg.jpg" alt="">
-              <span class="hover-text color-light">MedConnect - Connect Doctors with Patients</span>
-            </a>
-          </div>
-          <div class="gallery-item gallery-item--height2">
-            <a rel="noreferrer" target="_blank" href="https://github.com/SofPan/resource-wall">
-              <img src="/assets/resource_wall.png" alt="">
-              <span class="hover-text color-light">Resource Wall - Collect Learning Resources</span>
-            </a>
-          </div>
-        </div>
-        <div class="gallery-column">
-          <div class="gallery-item gallery-item_full-height">
-            <a rel="noreferrer" target="_blank" href="https://github.com/SofPan/photolabs">
-              <img src="/assets/photolabs_thumb.png" alt="">
-              <span class="hover-text color-light">Photolabs - Lightweight Pinterest Clone</span>
-            </a>
-          </div>
-        </div>
+    <section id="Projects" class="projects bg-light">
+      <h2 class="color-gray">Personal Projects</h2>
+      <div id="featured_personal">
+        <!-- Personal Work Goes Here -->
       </div>
     </section>
     <section id="Contact" class="contact flex">
-      <aside class="bg-gray">
+      <aside class="bg-main">
         <div class="flex column between contact-text">
           <h2 class="color-light">Contact Me</h2>
           <div>
@@ -122,7 +71,7 @@
           </div>
         </div>
       </aside>
-      <aside>
+      <aside class="bg-gray">
         <div class="contact-form">
           <form id="contactForm" action="https://formspree.io/f/xwpkpanw" method="POST" class="flex column">
             <label>
@@ -138,17 +87,18 @@
               data-callback='onSubmit' data-action='submit' type="submit">Send</button>
           </form>
           <div class="links">
-            <h3>Find me on:</h3>
+            <h3 class="color-light">Find me on:</h3>
             <ul>
               <li>
-                <a rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/sofia-panchaud/"
-                  alt="find me on Linkedin">
+                <a rel="noreferrer" class="color-light" target="_blank"
+                  href="https://www.linkedin.com/in/sofia-panchaud/" alt="find me on Linkedin">
                   <i alt="linkedIn" class="fab fa-linkedin"></i>
                   <span class="sr-only">LinkedIn</span>
                 </a>
               </li>
               <li>
-                <a rel="noreferrer" target="_blank" href="https://github.com/SofPan" alt="find me on GitHub">
+                <a rel="noreferrer" class="color-light" target="_blank" href="https://github.com/SofPan"
+                  alt="find me on GitHub">
                   <i alt="GitHub" class="fab fa-github"></i>
                   <span class="sr-only">GitHub</span>
                 </a>

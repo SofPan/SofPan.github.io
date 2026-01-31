@@ -136,7 +136,7 @@ header{
   height: 170px;
   background-image: linear-gradient(
                       145deg,
-                      rgb(7, 141, 143) 45%,
+                      lightgray 45%,
                       transparent 45%
                       ) ;
 }
@@ -158,7 +158,7 @@ header{
   position: absolute;
   bottom: 0;
   left: 0;
-  background-color: rgb(7, 141, 143);
+  background-color: lightgray;
   width: 0;
   height: 3px;
   transition: width 450ms ease-out;
@@ -193,7 +193,7 @@ header{
   position: absolute;
   height: 90%;
   width: 3px;
-  background-color: rgb(7, 141, 143);
+  background-color: lightgray;
   right: 0;
 }
 
@@ -203,7 +203,7 @@ header{
 
 .hero-btn{
   font-size: 1.4rem;
-  border: 3px solid gray;
+  border: 3px solid lightgray;
   border-radius: 6px;
   padding: 5px 10px;
   background-color: transparent;
@@ -212,20 +212,19 @@ header{
 }
 
 .hero-btn:hover{
-  background: rgb(7, 141, 143);
-  border-color: rgb(7, 141, 143);
+  background: lightgray;
 }
 .hero-btn a{
   transition: color 300ms ease-out;
 }
 .hero-btn:hover a{
-  color: lightgrey;
+  color: gray;
 }
 
 .city{
   width: 200%;
   padding-bottom: 60px;
-  background-image: radial-gradient(rgb(7, 141, 143) 20%, transparent 20%);
+  background-image: radial-gradient(lightgray 20%, transparent 20%);
   background-color: transparent;
   background-position: 50px 108px;
   background-size: 77px 80px;
@@ -251,8 +250,8 @@ header{
   top: 0;
   left: -21em;
   transform: rotate(49deg);
-  border-left: solid 10px rgb(7, 141, 143);
-  border-right: solid 10px rgb(7, 141, 143);
+  border-left: solid 10px lightgray;
+  border-right: solid 10px lightgray;
 }
 
 .hexagon1:before, .hexagon1:after {
@@ -268,14 +267,14 @@ header{
 
 .hexagon1:before {
   top: -114.066017px;
-  border-top: solid 14.142135623730951px rgb(7, 141, 143);
-  border-right: solid 14.142135623730951px rgb(7, 141, 143);
+  border-top: solid 14.142135623730951px lightgray;
+  border-right: solid 14.142135623730951px lightgray;
 }
 
 .hexagon1:after {
   bottom: -106.06601717798212px;
-  border-bottom: solid 14.142135623730951px rgb(7, 141, 143);
-  border-left: solid 14.142135623730951px rgb(7, 141, 143);
+  border-bottom: solid 14.142135623730951px lightgray;
+  border-left: solid 14.142135623730951px lightgray;
 }
 
 .hexagon2{
@@ -296,8 +295,8 @@ header{
 
 .hexagon2:before {
   top: -114.066017px;
-  border-top: solid 14.142135623730951px rgb(7, 141, 143);
-  border-right: solid 14.142135623730951px rgb(7, 141, 143);
+  border-top: solid 14.142135623730951px lightgray;
+  border-right: solid 14.142135623730951px lightgray;
 }
 
 .hexagon2:after {
@@ -323,14 +322,14 @@ header{
 
 .hexagon3:before {
   top: -114.066017px;
-  border-top: solid 14.142135623730951px rgb(7, 141, 143);
-  border-right: solid 14.142135623730951px rgb(7, 141, 143);
+  border-top: solid 14.142135623730951px lightgray;
+  border-right: solid 14.142135623730951px lightgray;
 }
 
 .hexagon3:after {
   bottom: -106.06601717798212px;
-  border-bottom: solid 14.142135623730951px rgb(7, 141, 143);
-  border-left: solid 14.142135623730951px rgb(7, 141, 143);
+  border-bottom: solid 14.142135623730951px lightgray;
+  border-left: solid 14.142135623730951px lightgray;
 }
 
 
@@ -365,21 +364,61 @@ aside{
   height: 400px;
   margin: 0 10px;
 }
-
+/* 
 .gallery-item_full-height{
   width: 100%;
   height: 100%;
   
-}
+} */
 
 .gallery-item{
   position: relative;
+  width: 50%;
+  margin-bottom: 80px;
+}
+
+.gallery-item p:before{
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: repeating-radial-gradient(
+    circle at center,
+    rgb(7, 141, 143) 0%, rgb(7, 141, 143) 30%,
+    lightgray 30%, lightgray 60%,
+    rgb(7, 141, 143) 60%, rgb(7, 141, 143) 100%
+  );
+  opacity: 0.5;
+  border-radius: 50%;
+  top: 25%;
+  z-index:1;
+}
+
+.gallery-item.left p:before{
+  right: -3em;
+}
+
+.gallery-item.right p:before{
+  left: -9em;
+}
+
+.right{
+  justify-self: flex-end;
+}
+
+.gallery-title{
+  justify-content: space-between;
+}
+
+.gallery-item > div, .gallery-item > a, .gallery-item p{
+  position: relative;
+  z-index: 30;
 }
   
 .gallery-item img{
   object-fit: cover;
-  width: 100%;
-  height: 100%;
+  width: 10%;
+  height: 10%;
   position: relative;
   border: 5px solid transparent;
   transition: all 300ms ease-out;
@@ -387,19 +426,19 @@ aside{
 }
 
 
-.gallery-logo img {
+/* .gallery-logo img {
   object-fit: contain;
   height: auto;
   width: auto;
-  max-height: 100%;
-  max-width: 100%;
-}
+  max-height: 25%;
+  max-width: 25%;
+} */
 
-.gallery-item--height2{
+/* .gallery-item--height2{
   height: 45%;
-}
+} */
 
-.hover-text{
+/* .hover-text{
   visibility: hidden;
   position: absolute;
   bottom: 0;
@@ -408,16 +447,16 @@ aside{
   font-size: 1.1rem;
   text-wrap: nowrap;
   transition: all 300ms ease-out;
-}
+} */
 
-.gallery-item:hover .hover-text{
+/* .gallery-item:hover .hover-text{
   visibility: visible;
   bottom: -2em;
-}
+} */
 
-.gallery-item:hover img{
+/* .gallery-item:hover img{
   border-color: rgb(12, 221, 225);
-}
+} */
 
 
 /* Contact Form */
@@ -452,11 +491,12 @@ textarea{
 .form-btn{
   padding: 3px 5px;
   max-width: 150px;
-  border: 2px solid gray;
-  background: gray;
+  border: 2px solid lightgray;
+  background: lightgray;
   border-radius: 5px;
-  color: lightgray;
+  color: gray;
   font-size: 1.2rem;
+  font-weight: bold;
   transition: all 300ms ease-out;
 }
 
@@ -464,6 +504,7 @@ textarea{
   cursor: pointer;
   border-color:rgb(7, 141, 143);
   background-color: rgb(7, 141, 143);
+  color: lightgray;
 }
 
 .links{
@@ -579,6 +620,7 @@ i:hover{
     max-width: 85%;
     margin: 0 auto;
     margin-bottom: 36px;
+    display: flex;
   }
 
   .gallery-item a{
