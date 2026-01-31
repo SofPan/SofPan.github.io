@@ -60,15 +60,15 @@ const populateGallery = (parentDiv, projectArray) => {
   return projectArray.map((project, i) => {
     return parentDiv.innerHTML += `
         <div class="gallery-item fade-in ${i % 2 === 0 ? "left" : "right"}">
-          <div>
-            <div class="flex gallery-title">
+          <img class="gallery-thumb" src="${project.logo}" alt="${project.title}">
+          <div class="gallery-content">
+            <div class="gallery-title">
               <h3>${project.title}</h3>
-              <!-- <img src="${project.logo}" alt="${project.title}"> -->
             </div>
             <h4>${project.experience}</h4>
             <p>${project.description}</p>
+            <a rel="noreferrer" target="_blank" href="${project.url}">${project.title.split('-')[0]}</a>
           </div>
-          <a rel="noreferrer" target="_blank" href="${project.url}">${project.title.split('-')[0]}</a>
         </div>
       `
   })

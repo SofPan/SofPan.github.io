@@ -213,12 +213,16 @@ header {
 ============================================ */
 #About {
   padding: 100px 48px;
-  max-width: 820px;
   margin: 0 auto;
   text-align: center;
   color: var(--ice);
+  position: relative;
+  overflow: hidden;
 }
-
+.about{
+  max-width: 820px;
+  margin: 0 auto;
+}
 #About h2 {
   font-family: 'Playfair Display', serif;
   font-size: 2rem;
@@ -236,7 +240,28 @@ header {
   font-size: 1.05rem;
   line-height: 1.9;
   font-weight: 300;
+  text-align: left;
+  margin-bottom: 12px;
 }
+
+.about-hexagons {
+  position: absolute;
+  top: -30px; left: -50px;
+  width: 320px; height: 320px;
+  z-index: 0;
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+.about-hex {
+  position: absolute;
+  background: var(--ice);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.about-hex1 { width: 180px; height: 180px; top: 0; left: 0; }
+.about-hex2 { width: 140px; height: 140px; top: 60px; left: 80px; opacity: 0.6; }
+.about-hex3 { width: 100px; height: 100px; top: 140px; left: 10px; opacity: 0.4; }
 
 /* ============================================
   SECTION TITLES
@@ -278,15 +303,17 @@ header {
 /* ============================================
   GALLERY ITEMS (cards)
 ============================================ */
-.gallery-item {
+gallery-item {
   background: var(--white);
   border-radius: 10px;
-  padding: 40px 44px;
+  padding: 0;
   box-shadow: var(--shadow-sm);
   border: 1px solid rgba(26, 38, 52, 0.06);
   transition: box-shadow var(--transition), transform var(--transition), border-color var(--transition);
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: row;
 }
 
 .gallery-item::before {
@@ -306,6 +333,23 @@ header {
 }
 
 .gallery-item:hover::before { opacity: 1; }
+
+.gallery-thumb {
+  width: 220px;
+  min-height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+  padding-left: 40px;
+  padding-top: 12px;
+  border-radius: 8px;
+}
+
+.gallery-content {
+  padding: 24px 40px 44px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 .gallery-title h3 {
   font-size: 1.15rem;
@@ -515,9 +559,13 @@ footer {
   .hexagon2 { width: 90px; height: 90px; top: 80px; right: 70px;}
   .hexagon3 { width: 70px; height: 70px; top: 130px; right: 20px;}
   #About { padding: 60px 24px; }
+  .about-hex1 { width: 150px; height: 150px;}
+  .about-hex2 { width: 110px; height: 110px;}
+  .about-hex3 { width: 70px; height: 70px; top: 130px; left: 48px;}
   .projects { padding: 60px 24px; }
-  .gallery-item { padding: 28px 24px; }
-  .contact { flex-direction: column; }
+  .gallery-item { flex-direction: column; }
+  .gallery-thumb { width: 100%; height: 200px; }
+  .gallery-content { padding: 28px 24px; }  .contact { flex-direction: column; }
   .contact aside { padding: 48px 24px; width: 100%;}
   footer{max-height:20px; padding: 25px;}
 }
