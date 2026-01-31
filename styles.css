@@ -511,17 +511,22 @@ footer {
   .hero-right { align-items: flex-start; }
   .hexagons { width: 220px; height: 220px; right: -30px; bottom: -20px; }
   .hexagon { width: 120px; height: 120px; }
-  .hexagon2 { width: 90px; height: 90px; }
-  .hexagon3 { width: 70px; height: 70px; }
+  .hexagon1 {top:24px;}
+  .hexagon2 { width: 90px; height: 90px; top: 80px; right: 70px;}
+  .hexagon3 { width: 70px; height: 70px; top: 130px; right: 20px;}
   #About { padding: 60px 24px; }
   .projects { padding: 60px 24px; }
   .gallery-item { padding: 28px 24px; }
   .contact { flex-direction: column; }
-  .contact aside { padding: 48px 24px; }
+  .contact aside { padding: 48px 24px; width: 100%;}
+  footer{max-height:20px; padding: 25px;}
 }
 
 @media (max-width: 480px) {
   .hero-left h1 { font-size: 2.4rem; }
   nav ul { gap: 14px; }
-  nav a { font-size: 0.75rem; }
+  nav a { 
+    font-size: 0.75rem;
+    text-wrap: nowrap;
+  }
 }
