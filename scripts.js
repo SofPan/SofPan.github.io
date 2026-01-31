@@ -59,7 +59,7 @@ const project_gallery = document.getElementById('featured_personal');
 const populateGallery = (parentDiv, projectArray) => {
   return projectArray.map((project, i) => {
     return parentDiv.innerHTML += `
-        <div class="gallery-item ${i % 2 === 0 ? "left" : "right"}">
+        <div class="gallery-item fade-in ${i % 2 === 0 ? "left" : "right"}">
           <div>
             <div class="flex gallery-title">
               <h3>${project.title}</h3>
@@ -76,3 +76,18 @@ const populateGallery = (parentDiv, projectArray) => {
 
 populateGallery(professional_gallery, PROFESSIONAL);
 populateGallery(project_gallery, PROJECTS);
+
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: '0px 0px -60px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(el => {
+    if (el.isIntersecting) {
+      el.target.classList.add('visible');
+    }
+  });
+}, observerOptions);
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
