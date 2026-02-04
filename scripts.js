@@ -19,6 +19,14 @@ const PROFESSIONAL = [
 
 const PROJECTS = [
   {
+    title: "Lanezy - Customizable Kanban",
+    experience: "Fullstack Web Application | 2026",
+    description: "This project is under construction. I invite you to check back periodically to see my progress! Lanezy is a customizable kanban board, intended for anyone who needs to keep themselves organized, be it a student, a freelancer, or a team.",
+    stack: ["Typescript", "Nextjs", "tRPC", "Prisma", "TailwindCSS"],
+    url: "",
+    logo: "/assets/building.png"
+  },
+  {
     title: "MoodLoop - Track Your Moods",
     experience: "Fullstack Web Application | 2026",
     description: "A mood and wellness tracking application that helps users identify patterns in their mental health through daily entries and data visualization.",
@@ -35,14 +43,6 @@ const PROJECTS = [
     logo: "/assets/med-bg.jpg"
   },
   {
-    title: "Jungle - E-Commerce App",
-    experience: "Fullstack Web Application | 2024",
-    description: "Full-featured e-commerce platform with product catalog, shopping cart functionality, and Stripe payment integration. Includes an admin dashboard for inventory management and order tracking.",
-    stack: ["Ruby on Rails", "PostgreSQL", "Stripe API", "Bootstrap"],
-    url: "https://github.com/SofPan/jungle",
-    logo: "/assets/jungle_thumb.png"
-  },
-  {
     title: "Resource Wall - Collect Learning Resources",
     experience: "Fullstack Web Application | 2024",
     description: "Collaborative resource-sharing platform where users can save, organize, and discover educational content. Includes features for rating resources, categorizing by topic, and commenting to build a community-driven learning library.",
@@ -52,14 +52,28 @@ const PROJECTS = [
   }
 ]
 
+const OTHER_WORK = [
+  {
+    title: "Ford Motors - Investor Relations",
+    type: "Professional Work",
+    url: "https://shareholder.ford.com/Home/default.aspx"
+  },
+  {
+    title: "Jungle - E-Commerce App",
+    type: "School Project",
+    url: "https://github.com/SofPan/jungle"
+  }
+]
+
 const professional_gallery = document.getElementById('featured_professional');
 const project_gallery = document.getElementById('featured_personal');
 
+const other_list = document.getElementById('other_work');
 
 const populateGallery = (parentDiv, projectArray) => {
-  return projectArray.map((project, i) => {
+  return projectArray.map((project) => {
     return parentDiv.innerHTML += `
-        <div class="gallery-item fade-in ${i % 2 === 0 ? "left" : "right"}">
+        <div class="gallery-item fade-in">
           <img class="gallery-thumb" src="${project.logo}" alt="${project.title}">
           <div class="gallery-content">
             <div class="gallery-title">
@@ -77,6 +91,22 @@ const populateGallery = (parentDiv, projectArray) => {
 
 populateGallery(professional_gallery, PROFESSIONAL);
 populateGallery(project_gallery, PROJECTS);
+
+const populateOtherWork = (parentDiv, projectArray) => {
+  return (parentDiv.innerHTML = `
+      <div>
+        ${projectArray.map((project) => {
+    return `
+            <div>
+              <a rel="noreferrer" target="_blank" href=${project.url} alt=${project.title}>${project.title} | ${project.type}</a>
+            </div>
+          `
+  }).join("")}
+      </div>
+    `)
+}
+
+populateOtherWork(other_list, OTHER_WORK);
 
 const observerOptions = {
   threshold: 0.1,

@@ -300,6 +300,34 @@ header {
   gap: 48px;
 }
 
+.other_work{
+  text-align: center;
+  padding-bottom: 24px;
+  margin-bottom: 12px;
+}
+
+.other_work a{
+  text-decoration: none;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gray-dark);
+  position: relative;
+  padding-bottom: 4px;
+  transition: color var(--transition);
+}
+
+.other_work a::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 0; height: 1.5px;
+  background: var(--cobalt-light);
+  transition: width var(--transition);
+}
+.other_work a:hover::after { width: 100%; }
+
+
 /* ============================================
   GALLERY ITEMS (cards)
 ============================================ */
